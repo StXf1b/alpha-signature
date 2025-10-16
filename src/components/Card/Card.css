@@ -1,0 +1,53 @@
+/* * Base card styles shared across all variants */
+.card {
+  border-radius: var(--border-radius-md); /* Rounded corners */
+  padding: 16px; /* Inner spacing */
+  background-color: var(--card-bg); /* Default background */
+  color: var(--color-text-light); /* Default text */
+  transition: transform var(--transition-medium) ease,
+              box-shadow var(--transition-medium) ease;
+}
+
+/* * Default card */
+.card-default {
+  box-shadow: var(--shadow-md, 0 2px 6px rgba(0,0,0,0.1));
+}
+
+/* * Shadow card */
+.card-shadow {
+  box-shadow: var(--shadow-lg, 0 4px 12px rgba(0,0,0,0.15));
+}
+/* * Hover state */
+.card-shadow:hover {
+  transform: translateY(-1px); /* Subtle lift */
+  box-shadow: var(--shadow-xl, 0 6px 20px rgba(0,0,0,0.2));
+}
+
+/* * Header/Footer etc. slots */
+.card-header {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  margin-bottom: 12px;
+}
+/* * Footer slot */
+.card-footer {
+  margin-top: 12px; 
+  font-size: var(--font-size-md); 
+  color: var(--color-text-muted, #6b7280); 
+}
+
+/* * Button slot */
+.card .card-button {
+  margin-top: 16px; 
+  text-align: right;
+  float: right; 
+}
+
+/* * Input slot */
+.card .card-input {
+  background-color: var(--card-bg); 
+  border: 1px solid var(--color-primary-light);
+  margin-top: 9px;
+}
+
+

@@ -2,7 +2,7 @@
 .button {
     border-radius: var(--border-radius-md);
     padding: 6px 15px; 
-    font-weight: 600; /* Bold text */
+    font-weight: 500; /* Bold text */
     border: none; /* Remove default border */
     letter-spacing: 0.4px; /* Spacing */
     font-size: var(--font-size-lg); 

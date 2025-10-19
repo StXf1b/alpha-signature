@@ -1,0 +1,7 @@
+.review-container {
+    padding: 20px;
+    background-color: #0D0D0D;
+}
+.review-container div {
+    background-color: none;
+}

@@ -10,7 +10,7 @@ export default function Home() {
         <p>Alpha Signature presents the revolutionary transition between precision barbering and contemporary hairdressing.</p>
         <div className="hero-buttons">
         <Button variant='primary'>Book Appointment</Button>
-        <Button style={{marginLeft: '1rem'}} variant='secondary'>View Services</Button>
+        <Button variant='secondary'>View Services</Button>
         </div>
     </div>
     <div className="hero-image"><img src={Hero} alt="Hero" /></div>

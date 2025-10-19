@@ -29,7 +29,7 @@
 /* ========== Navbar ========== */
 .navbar {
   position: absolute;
-  top: 30px; /* sits below the topbar */
+  top: 30px;
   width: 100%;
   padding: 0.6rem 8%;
   display: flex;
@@ -42,8 +42,7 @@
   transition: all var(--transition-medium);
 }
 
-
-.navbar-logo img {
+.navbar-logo svg {
   filter: brightness(1.3);
 }
 
@@ -64,31 +63,21 @@
   color: var(--color-primary);
 }
 
-.book-btn {
-  background: var(--color-primary);
-  color: #fff !important;
-  padding: 0.6rem 1.4rem;
-  border-radius: var(--border-radius-full);
-  transition: background var(--transition-medium);
-}
-
-.book-btn:hover {
-  background: var(--color-primary-hover);
-}
-
 /* ========== Mobile ========== */
 .menu-toggle {
   display: none;
-  font-size: 1.6rem;
-  color: var(--color-text-dark);
+  font-size: 1.8rem;
+  color: var(--color-primary);
   cursor: pointer;
+  z-index: 1100;
 }
 
 @media (max-width: 768px) {
   .topbar {
-    padding: 0.4rem 5%;
+    padding: 0.2rem 5%;
     text-align: center;
   }
+
 
   .topbar-content {
     justify-content: center;
@@ -98,27 +87,32 @@
   .navbar {
     flex-wrap: wrap;
     justify-content: space-between;
-    top: 50px; /* adjust if topbar height changes */
+    top: 58px;
   }
-
   .navbar-links {
-    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     flex-direction: column;
-    width: 100%;
     background-color: #0d0d0d;
     text-align: center;
     border-top: 1px solid rgba(199, 162, 84, 0.3);
-    padding: 1rem 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
   }
 
   .navbar-links.show {
-    display: flex;
+    max-height: 400px; 
+    opacity: 1;
+    visibility: visible;
   }
-
-  .menu-toggle {
-    display: block;
+  .navbar-links li:nth-child(1) {
+    margin-top: 10px;
   }
-
   .navbar-links a {
     padding: 0.8rem 0;
     font-size: 1.1rem;
@@ -126,5 +120,17 @@
 
   .book-btn {
     margin-top: 0.5rem;
+    margin-bottom: 2rem;
   }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.menu-toggle svg {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.menu-toggle:hover svg {
+  transform: scale(1.1);
 }

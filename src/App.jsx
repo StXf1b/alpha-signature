@@ -1,12 +1,16 @@
 import './App.css'
 import "./styles/settings.css"
-import { Button } from "./components/Button/Button"
+import Navbar from "./components/Navbar/Navbar"
+import Home from "./pages/Home"
+import About from "./pages/About"
 function App() {
 
 
   return (
     <>
-      <Button variant="primary">Click Me</Button>
+      <Navbar />
+      <Home />
+      <About />
     </>
   )
 }

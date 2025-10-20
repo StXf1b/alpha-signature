@@ -4,9 +4,9 @@
   padding: 10px 14px; 
   font-size: var(--font-size-lg);
   border-radius: var(--border-radius-md);
-  border: 2px solid var(--color-border, #e5e7eb); 
-  background-color: var(--color-bg-light);
-  color: var(--color-text-light);
+  border: 2px solid #333; 
+  background-color: #111;
+  color: var(--color-text-dark);
   outline: none;
   transition: border-color var(--transition-fast) ease-in-out, box-shadow var(--transition-fast) ease-in-out;
 }
@@ -19,7 +19,7 @@
 /* * Focus state */
 .input:focus {
   border-color: var(--color-primary, #6366F1);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Indigo glow */
+  box-shadow: 0 0 0 3px rgba(230, 199, 126, 0.3);
 }
 
 /* * Disabled state */

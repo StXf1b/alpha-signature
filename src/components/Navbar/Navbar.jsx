@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import "./Navbar.css";
 import Logo from "../../assets/logo.svg";
-import { Button } from "../Button/Button";
+import { Button } from "../../ui/Button/Button";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,14 +35,14 @@ export default function Navbar() {
         </div>
 
         <ul className={`navbar-links ${menuOpen ? "show" : ""}`}>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Our Team</a></li>
-          <li><a href="#">Gallery</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/services">Services</Link></li>
+          <li><Link to="/our-team">Our Team</Link></li>
+          <li><Link to="/gallery">Gallery</Link></li>
           <li>
-            <a href="#" className="book-btn">
+            <Link to="/contact" className="book-btn">
               <Button style={{ marginTop: "-5px" }} className="book-btn">Book Now</Button>
-            </a>
+            </Link>
           </li>
         </ul>
 

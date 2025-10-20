@@ -4,7 +4,7 @@
   align-items: center;
   background-color: var(--color-bg-dark);
   color: var(--color-text-dark);
-  min-height: 85vh;
+  min-height: 80vh;
   padding: 0 8%;
   flex-wrap: wrap;
   overflow: hidden;
@@ -57,11 +57,9 @@
   margin-left: 30px;
   transition: transform 0.4s ease;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
-.hero-image img:hover {
-  transform: scale(1.03);
-}
 
 /* === Tablet (≤1024px) === */
 @media (max-width: 1024px) {

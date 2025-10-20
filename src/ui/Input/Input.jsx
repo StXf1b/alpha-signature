@@ -26,11 +26,13 @@ export function Input({
     onChange = () => {},
     disabled = false,
     className = "",
+    style = {},
     error = false,
     success = false
 }) {
   return (
       <input className={`input ${className} ${error ? "error" : ""} ${success ? "success" : ""}`}
+        style={style}
         type={type}
         name={name}
         placeholder={placeholder}

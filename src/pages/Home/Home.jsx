@@ -1,0 +1,29 @@
+import React from 'react'
+import "./Home.css"
+import Hero from "../../assets/hero.png"
+import {Button} from "../../ui/Button/Button"
+import About from "../../components/About/About"
+import Review from "../../components/Review/Review"
+import OurValues from '../../components/OurValues/OurValues'
+import FeaturedServices from "../../components/FeaturedServices/FeaturedServices"
+export default function Home() {
+  return (
+    <>
+      <section className="hero">
+      <div className="hero-content">
+          <h1>Alpha Signature Crafting Confidence</h1>
+          <p>Alpha Signature presents the revolutionary transition between precision barbering and contemporary hairdressing.</p>
+          <div className="hero-buttons">
+          <Button variant='primary'>Book Appointment</Button>
+          <Button variant='secondary'>View Services</Button>
+          </div>
+      </div>
+      <div className="hero-image"><img src={Hero} alt="Hero" /></div>
+      </section>
+      <OurValues />
+      <About />
+      <FeaturedServices />
+      <Review />
+    </>
+  )
+}

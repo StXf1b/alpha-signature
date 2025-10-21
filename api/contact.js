@@ -8,7 +8,7 @@ export default async function handler(req, res) {
 
   const { firstName, lastName, email, phone, message } = req.body;
 
-  if (!firstName || !lastName || !email || !message) {
+  if (!firstName || !lastName || !email || !message || !phone) {
     return res.status(400).json({ message: "Please fill in all the fields!" });
   }
 

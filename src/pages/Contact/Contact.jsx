@@ -48,7 +48,6 @@ export default function Contact() {
                 name="message"
                 rows="5"
                 placeholder="Write your message..."
-                required
               ></textarea>
             </div>
 

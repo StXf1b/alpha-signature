@@ -1,22 +1,24 @@
-import React from "react";
 import {Input} from "../../ui/Input/Input";
 import {Button} from "../../ui/Button/Button";
 import "./Contact.css";
 import axios from "axios"
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function Contact() {
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    axios.post("/api/contact", data)
+    await axios.post("/api/contact", data)
       .then((res) => {
         console.log("Success:", res.data);
+        toast.success("Your message has been sent successfully.");
       })
       .catch((err) => {
         console.error("Error:", err);
-        alert("There was an error submitting the form. Please try again later.");
+        toast.error(err.response?.data?.message || "An error occurred");
       });
   } 
 
@@ -67,6 +69,10 @@ export default function Contact() {
           ></iframe>
         </div>
       </div>
+      <ToastContainer 
+        pauseOnHover
+        theme="dark" 
+        />
     </section>
   );
 }

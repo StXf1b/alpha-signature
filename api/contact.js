@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   const { firstName, lastName, email, phone, message } = req.body;
 
   if (!firstName || !lastName || !email || !message) {
-    return res.status(400).json({ message: "Missing required fields" });
+    return res.status(400).json({ message: "Please fill in all the fields!" });
   }
 
   try {
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
       to: process.env.RECEIVER_EMAIL, // where you want to receive messages
       subject: `New message from ${firstName} ${lastName}`,
       html: `
-        <h2>New Contact Form Submission</h2>
+        <h2>Contact Form Submission</h2>
         <p><strong>Name:</strong> ${firstName} ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone || "N/A"}</p>

@@ -1,0 +1,75 @@
+.services-page {
+  background: #0b0b0b;
+  color: #f5f5f5;
+  padding: 6rem 10%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-image: radial-gradient(#141414 1px, transparent 1px);
+  background-size: 20px 20px; 
+}
+/*  */
+.services-header h1 {
+  font-family: 'Playfair Display', serif;
+  color: #caa44f;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  height: 2px;
+  width: 200px;
+  background: #caa44f;
+  margin: 0.8rem auto 3rem;
+  border-radius: 2px;
+}
+
+.services-list {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(202, 164, 79, 0.3);
+  padding: 1.2rem 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: rgba(202, 164, 79, 0.08);
+}
+
+.service-name h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: left;
+}
+
+.service-name p {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: left;
+  margin-top: 0.3rem;
+}
+
+.service-price {
+  color: #caa44f;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) {
+  .services-page {
+    padding: 4rem 5%;
+    margin-top: 2rem;
+  }
+
+  .service-price {
+    margin-top: 0.5rem;
+  }
+}

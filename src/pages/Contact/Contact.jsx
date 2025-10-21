@@ -3,6 +3,7 @@ import {Button} from "../../ui/Button/Button";
 import "./Contact.css";
 import axios from "axios"
 import { ToastContainer, toast } from 'react-toastify';
+import PageTransition from "../../components/PageTransition/PageTransition"
 
 export default function Contact() {
 
@@ -24,6 +25,7 @@ export default function Contact() {
   } 
 
   return (
+    <PageTransition>
     <section className="contact">
       <div className="contact-container">
         {/* Left Side - Form */}
@@ -74,5 +76,6 @@ export default function Contact() {
         theme="dark" 
         />
     </section>
+    </PageTransition>
   );
 }

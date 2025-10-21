@@ -2,7 +2,7 @@
 .button {
     border-radius: var(--border-radius-md);
     padding: 6px 15px; 
-    font-weight: 500; /* Bold text */
+    font-weight: 600; /* Bold text */
     border: none; /* Remove default border */
     letter-spacing: 0.4px; /* Spacing */
     font-size: var(--font-size-lg); 
@@ -29,7 +29,7 @@
 
 /* * Primary button (solid background) */
 .primary {
-    color: var(--color-text-dark); 
+    color: #121212ff; 
     background: var(--color-primary); 
     box-shadow: var(--shadow-lg); 
 }

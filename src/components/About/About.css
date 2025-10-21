@@ -50,10 +50,6 @@
   transition: transform 0.4s ease;
 }
 
-.about-image img:hover {
-  transform: scale(1.03);
-}
-
 /* ===== Boxes ===== */
 .about-box-container {
   display: flex;
@@ -77,10 +73,6 @@
   transition: all 0.3s ease;
 }
 
-.about-box:hover {
-  transform: translateY(-5px);
-  border-color: gold;
-}
 
 .about-box h2 {
   display: flex;

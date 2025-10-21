@@ -19,14 +19,14 @@ export default async function handler(req, res) {
       port: 465,
       secure: true, // true for 465, false for 587
       auth: {
-        user: process.env.EMAIL_USER, // your email address
-        pass: process.env.EMAIL_PASS, // your app password
+        user: process.env.EMAIL_USER, // ignore error
+        pass: process.env.EMAIL_PASS, // ignore error
       },
     });
     // Email content
     const mailOptions = {
-      from: `"Alpha Signature Contact" <${process.env.EMAIL_USER}>`,
-      to: process.env.RECEIVER_EMAIL, // where you want to receive messages
+      from: `"Alpha Signature Contact" <${process.env.EMAIL_USER}>`, // ignore error
+      to: process.env.RECEIVER_EMAIL, // ignore error
       subject: `New message from ${firstName} ${lastName}`,
       html: `
         <h2>Contact Form Submission</h2>

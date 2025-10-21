@@ -3,8 +3,11 @@
   color: #ddd;
   padding: 3rem 8% 1rem;
   border-top: 1px solid rgba(199, 162, 84, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
+/* ===== Layout ===== */
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -18,40 +21,83 @@
 }
 
 .footer-logo {
-  max-width: 250px;
+  max-width: 230px;
   filter: brightness(1.4);
   margin-bottom: 1rem;
 }
 
+/* ===== Section Titles ===== */
 .footer-section h3 {
-  color: var(--color-primary);
+  color: #c7a454;
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
 
+/* Gold flourishes before and after titles */
+.footer-section h3::before,
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c7a454, transparent);
+}
+
+.footer-section h3::before {
+  left: -40px;
+}
+
+.footer-section h3::after {
+  right: -40px;
+}
+
+/* ===== Text and Links ===== */
 .footer-section p {
   font-size: 0.95rem;
   line-height: 1.6;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: #e2e2e2;
 }
 
+.footer-hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-hours li {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ===== Socials ===== */
 .footer-socials {
   display: flex;
   gap: 1rem;
 }
 
 .footer-socials a {
-  color: var(--color-primary);
+  color: #c7a454;
   font-size: 1.3rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer-socials a:hover {
   color: gold;
+  transform: scale(1.1);
 }
 
+/* ===== Bottom Line ===== */
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
@@ -59,6 +105,7 @@
   padding-top: 1rem;
   font-size: 0.9rem;
   opacity: 0.8;
+  color: #bfbfbf;
 }
 
 /* ===== Responsive ===== */
@@ -79,5 +126,11 @@
 
   .footer-logo {
     margin: 0 auto 1rem;
+  }
+
+  /* Adjust flourishes for smaller screens */
+  .footer-section h3::before,
+  .footer-section h3::after {
+    display: none;
   }
 }

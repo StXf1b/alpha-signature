@@ -1,5 +1,6 @@
 import "./FeaturedServices.css";
 import { Button } from "../../ui/Button/Button";
+import {Link} from "react-router-dom"
 
 export default function FeaturedServices() {
   const services = [
@@ -30,7 +31,7 @@ export default function FeaturedServices() {
       <h1>Featured Services</h1>
       <div className="services-grid">
         {services.map((service, index) => (
-          <div className="service-item" key={index}>
+          <div className="service-item1" key={index}>
             <div className="service-header">
               <h2>{service.title}</h2>
               <span className="price">{service.price}</span>
@@ -40,7 +41,7 @@ export default function FeaturedServices() {
         ))}
       </div>
       <div className="see-more">
-        <Button variant="secondary">See More</Button>
+        <Button variant="primary"><Link style={{color:"#121212ff", textDecoration: "none"}} to="/services">See More</Link></Button>
       </div>
     </section>
   );

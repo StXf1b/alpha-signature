@@ -41,7 +41,7 @@ export default function Navbar() {
           <li><Link to="/gallery">Gallery</Link></li>
           <li>
             <Link to="/contact" className="book-btn">
-              <Button style={{ marginTop: "-5px" }} className="book-btn">Book Now</Button>
+              <Button style={{ marginTop: "-5px" }} className="book-btn">Contact Us</Button>
             </Link>
           </li>
         </ul>

@@ -15,6 +15,7 @@ export default function Contact() {
       .then((res) => {
         console.log("Success:", res.data);
         toast.success("Your message has been sent successfully.");
+        e.target.reset();
       })
       .catch((err) => {
         console.error("Error:", err);

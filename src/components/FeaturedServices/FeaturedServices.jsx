@@ -28,7 +28,7 @@ export default function FeaturedServices() {
 
   return (
     <section className="featured-services">
-      <h1>Featured Services</h1>
+      <h1>Pricing</h1>
       <div className="services-grid">
         {services.map((service, index) => (
           <div className="service-item1" key={index}>

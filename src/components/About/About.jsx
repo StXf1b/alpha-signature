@@ -3,6 +3,7 @@ import AboutImg from "../../assets/about.jpg"
 import { FaScissors } from "react-icons/fa6";
 import { GiHairStrands } from "react-icons/gi";
 import { Button } from "../../ui/Button/Button"
+import { Link } from "react-router-dom";
 function About() {
   return (
     <section className="about">
@@ -19,7 +20,9 @@ function About() {
                     <p>To be the leading barbershop in Cork, known for our exceptional service, skilled barbers, and commitment to customer satisfaction.</p>
                 </div>
             </div>
-            <Button variant="primary" style={{marginTop: "20px"}}>Our Team</Button>
+            <Link to="/our-team">
+                <Button variant="primary" style={{marginTop: "20px"}}>Our Team</Button>
+            </Link>
         </div>
         <div className="about-image"><img src={AboutImg} alt="About" /></div>
     </section>

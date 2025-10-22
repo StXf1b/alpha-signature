@@ -5,11 +5,14 @@ import App from './App.jsx'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { BrowserRouter as Router, } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
-      <App />
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
       <Analytics />
       <SpeedInsights />
     </Router>

@@ -1,0 +1,93 @@
+.careers {
+  background-color: #0d0d0d;
+  color: #ddd;
+  padding: 6rem 8%;
+  text-align: center;
+  margin-top: 25px;
+  background-image: radial-gradient(#141414 1px, transparent 1px);
+  background-size: 20px 20px; 
+}
+
+.careers-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 90vh;
+}
+
+.careers-content h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.careers-content .intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.careers-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.careers-card {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(199, 162, 84, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 480px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.careers-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(199, 162, 84, 0.15);
+}
+
+.careers-icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.careers-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+  color: var(--color-primary);
+}
+
+.careers-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.careers-card a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.careers-card a:hover {
+  color: gold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .careers {
+    padding: 4rem 5%;
+  }
+
+  .careers-card {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+}

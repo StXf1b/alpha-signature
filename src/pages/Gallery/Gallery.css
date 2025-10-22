@@ -1,0 +1,303 @@
+.gallery-section {
+  color: #fff;
+  padding: 5rem 8%;
+  text-align: center;
+  margin-top: 2rem;
+  background-image: radial-gradient(#141414 1px, transparent 1px);
+  background-size: 20px 20px; 
+}
+
+.gallery-header h1 {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.gallery-header p {
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+}
+
+/* ===== Grid ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #151515;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px rgba(199, 162, 84, 0.3);
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 3rem 5%;
+    margin-top: 4rem;
+  }
+
+  .gallery-header h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-grid {
+    gap: 1rem;
+  }
+}
+
+/* ===== Lightbox Overlay ===== */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+  backdrop-filter: blur(6px);
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: scaleIn 0.25s ease-in-out;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* ===== Video Play Icon Overlay ===== */
+.video-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gold;
+  font-size: 2.5rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.video-item:hover .play-overlay {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
+}
+
+/* Slight dark overlay on hover */
+.video-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  border-radius: 5px;
+}
+
+.video-item:hover::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+/* ===== Hover Info Overlay ===== */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.05);
+}
+
+.hover-info {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: rgba(13, 13, 13, 0.85);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.gallery-item:hover .hover-info {
+  bottom: 0;
+}
+
+.hover-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.hover-info p {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* ===== Play Icon Overlay for Videos ===== */
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gold;
+  font-size: 2.5rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.gallery-item:hover .play-overlay {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
+}
+
+/* === HERO SECTION === */
+.academy-hero {
+  position: relative;
+  height: 75vh;
+  background-image: url("https://images.unsplash.com/photo-1614252231839-5f2fdd0e5de8?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.hero-content1 {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero-content1 h1 {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.hero-content1 p {
+  font-size: 1.2rem;
+  color: #eee;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+  .hero-content1 h1 {
+    font-size: 2rem;
+  }
+  .hero-content1 p {
+    font-size: 1rem;
+  }
+}
+

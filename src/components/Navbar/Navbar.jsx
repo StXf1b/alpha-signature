@@ -30,16 +30,20 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <nav className="navbar">
-        <div className="navbar-logo">
-          <img src={Logo} alt="Barbershop Logo" />
-        </div>
+        <Link to="/">
+          <div className="navbar-logo">
+            <img src={Logo} alt="Barbershop Logo" />
+          </div>
+        </Link>
 
         <ul className={`navbar-links ${menuOpen ? "show" : ""}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/our-team">Our Team</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
-          <li>
+          <li onClick={() =>setMenuOpen(false)}><Link to="/">Home</Link></li>
+          <li onClick={() =>setMenuOpen(false)}><Link to="/services">Pricing</Link></li>
+          <li onClick={() =>setMenuOpen(false)}><Link to="/gallery">Gallery</Link></li>
+          <li onClick={() =>setMenuOpen(false)}><Link to="/our-team">Our Team</Link></li>
+          <li onClick={() =>setMenuOpen(false)}><Link to="/academy">Academy</Link></li>
+          <li onClick={() =>setMenuOpen(false)}><Link to="/careers">Careers</Link></li>
+          <li onClick={() =>setMenuOpen(false)}>
             <Link to="/contact" className="book-btn">
               <Button style={{ marginTop: "-5px" }} className="book-btn">Contact Us</Button>
             </Link>

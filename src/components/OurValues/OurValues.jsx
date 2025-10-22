@@ -14,7 +14,7 @@ export default function OurValues() {
           <FaStar />
         </div>
         <div className="value-text">
-          <h1>{inView ? <CountUp start={0} end={5} duration={2.75} separator="," /> : 0}</h1>
+          <h1>{inView ? <CountUp start={0} end={5} duration={2.5} separator="," /> : 0}</h1>
           <p>Star Reviews</p>
         </div>
       </div>
@@ -24,18 +24,8 @@ export default function OurValues() {
           <GiRazor />
         </div>
         <div className="value-text">
-          <h1>{inView ? <CountUp start={0} end={500} duration={2.75} separator="," /> : 0}</h1>
-          <p>Precision Cuts</p>
-        </div>
-      </div>
-
-      <div className="value-box">
-        <div className="icon-box">
-          <GiHairStrands />
-        </div>
-        <div className="value-text">
-          <h1>{inView ? <CountUp start={0} end={300} duration={2.75} separator="," /> : 0}</h1>
-          <p>Styled Clients</p>
+          <h1 style={{color: "var(--color-primary)"}}>{inView ? <CountUp start={0} end={10} duration={2.5} separator="," /> : 0}+</h1>
+          <p>Years Experience</p>
         </div>
       </div>
 
@@ -44,8 +34,18 @@ export default function OurValues() {
           <FaUsers />
         </div>
         <div className="value-text">
-          <h1>{inView ? <CountUp start={0} end={1000} duration={2.75} separator="," /> : 0}</h1>
-          <p>Happy Customers</p>
+          <h1 style={{color: "var(--color-primary)"}}>{inView ? <CountUp start={0} end={20} duration={2.5} separator="," /> : 0}+</h1>
+          <p>Students</p>
+        </div>
+      </div>
+
+      <div className="value-box">
+        <div className="icon-box">
+          <GiHairStrands />
+        </div>
+        <div className="value-text">
+          <h1 style={{color: "var(--color-primary)"}}>{inView ? <CountUp start={0} end={300} duration={2.5} separator="," /> : 0}+</h1>
+          <p>Happy Clients</p>
         </div>
       </div>
     </section>

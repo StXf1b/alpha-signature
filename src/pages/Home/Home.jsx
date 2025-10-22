@@ -26,7 +26,8 @@ export default function Home() {
           </div>
           <div className="hero-image"><img src={Hero} alt="Hero" /></div>
         </section>
-        <OurValues />
+        <OurValues /> 
+        {/* ff */}
         <About />
         <FeaturedServices />
         <Review />

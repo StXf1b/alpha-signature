@@ -2,19 +2,11 @@ import "./Careers.css";
 import { Button } from "../../ui/Button/Button";
 import { Link } from "react-router-dom";
 import { FaEnvelopeOpenText, FaUserTie } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
 import PageTransition from "../../components/PageTransition/PageTransition"
 
 export default function Careers() {
   return (
     <PageTransition>
-      <Helmet>
-        <title>Careers at Alpha Signature | Join Our Team</title>
-        <meta
-          name="description"
-          content="Join the Alpha Signature team in Bandon and take your barbering career to the next level."
-        />
-      </Helmet>
         <section className="careers">
         <div className="careers-container">
             <div className="careers-content">

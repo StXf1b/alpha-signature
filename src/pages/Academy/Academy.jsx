@@ -4,20 +4,12 @@ import { FaGraduationCap, FaChalkboardTeacher, FaUsers } from "react-icons/fa";
 import { Button } from "../../ui/Button/Button";
 import academyBg from "../../assets/academy.png"
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import PageTransition from "../../components/PageTransition/PageTransition"
 
 export default function Academy() {
   return (
     <>
     <PageTransition>
-      <Helmet>
-        <title>Alpha Signature Academy | Learn Barbering</title>
-        <meta
-          name="description"
-          content="Join the Alpha Signature Academy to learn modern barbering techniques from industry experts."
-        />
-      </Helmet>
         <section className="academy-page">
 
         {/* 🎓 Hero Section */}

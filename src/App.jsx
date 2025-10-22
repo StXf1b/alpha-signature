@@ -2,7 +2,6 @@ import './App.css'
 import "./styles/settings.css"
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { HelmetProvider } from "react-helmet-async";
 import Navbar from "./components/Navbar/Navbar"
 import Home from "./pages/Home/Home"
 import Footer from './components/Footer/Footer'
@@ -12,7 +11,6 @@ import Team from './pages/Team/Team'
 import Services from "./pages/Services/Services"
 import Academy from './pages/Academy/Academy';
 import Careers from './pages/Careers/Careers';
-import PageTransition from "./components/PageTransition/PageTransition";
 
 
 function App() {
